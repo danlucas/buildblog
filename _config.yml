@@ -13,12 +13,12 @@ markdown: kramdown
 
 #rake task settings
 post:
-  template: _post.txt
+  template: _templates/post.txt
   extension: md
 page:
-  template: _page.txt
+  template: _templates/page.html
   extension: md
-editor: gvim
+editor: atom
 git:
   branch: master
 transfer:
