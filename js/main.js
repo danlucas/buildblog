@@ -5,5 +5,14 @@ var github = new Github({
 var repo = github.getRepo('danlucas', 'danlucas.github.io');
 
 repo.getCommits({}, function(err, commits) {
-    console.log(commits[0].commit.message);
+    var item, link;
+    _.each(commits, function(elem){
+        link = $('<a />', {
+            text: elem.commit.message,
+            href: elem.html_url
+        });
+        item = $('<li>').append(link);
+        $('.commit-list > ul').append(item);
+        console.log(elem);
+    });
 });
