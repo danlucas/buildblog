@@ -234,3 +234,19 @@
         }
     }
 }
+
+.home {
+    display: -webkit-flex;
+    display: flex;
+}
+.posts {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.commit-list ul li a {
+    font-size: $small-font-size;
+}
+.commit-list {
+    width: 200px;
+}
