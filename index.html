@@ -12,13 +12,17 @@ layout: default
             <li>
                 <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-                <h2>
                 {% if post.external-url %}
+                <h3>
+                    <svg class="icon-link"><use xlink:href="#icon-link"></use></svg>
                     <a class="external-link" href="{{ post.external-url }}">{{ post.title }}</a>
+                </h3>
                 {% else %}
+                <h2>
+                    <svg class="icon-hammer"><use xlink:href="#icon-hammer"></use></svg>
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                {% endif %}
                 </h2>
+                {% endif %}
 
                 <div class="post-content">
                     {{post.content}}
