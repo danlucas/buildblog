@@ -16,7 +16,7 @@ post:
   template: _templates/post.txt
   extension: md
 page:
-  template: _templates/page.html
+  template: _templates/page.txt
   extension: md
 editor: atom
 git:

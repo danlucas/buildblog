@@ -31,10 +31,37 @@ layout: default
             {% endfor %}
         </ul>
     </div>
+    <div class="pages-links">
+        <div class="pages">
+            <h4>About the project</h4>
+            <ul>
+                {% for page in site.pages %}
+                {% if page.title %}
+                <li>
+                    <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
 
-    <div class="commit-list">
-        <h4>danlucas.github.io commits</h4>
-        <ul></ul>
+        <div class="commit-list">
+            <h4>danlucas.github.io commits</h4>
+            <ul></ul>
+        </div>
+
+        <div class="external-links">
+            <h4>Useful(?) Resources</h4>
+            <ul>
+                {% for post in site.posts %}
+                {% if post.external-url %}
+                <li>
+                    <a class="external-link" href="{{ post.external-url }}">{{ post.title }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 
 </div>
