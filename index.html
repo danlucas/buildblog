@@ -17,6 +17,10 @@ layout: default
                     <svg class="icon-link"><use xlink:href="#icon-link"></use></svg>
                     <a class="external-link" href="{{ post.external-url }}">{{ post.title }}</a>
                 </h3>
+                {% elsif post.page-url %}
+                <h3>
+                    <a class="page-link" href="{{ post.page-url }}">{{ post.title }}</a>
+                </h3>
                 {% else %}
                 <h2>
                     <svg class="icon-hammer"><use xlink:href="#icon-hammer"></use></svg>
@@ -31,6 +35,7 @@ layout: default
             {% endfor %}
         </ul>
     </div>
+
     <div class="pages-links">
         <div class="pages">
             <h4>About the project</h4>
