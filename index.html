@@ -19,6 +19,9 @@ layout: default
                 </h3>
                 {% elsif post.page-url %}
                 <h3>
+                    <svg class="icon-file">
+                        <use xlink:href="#icon-file"></use>
+                    </svg>
                     <a class="page-link" href="{{ post.page-url }}">{{ post.title }}</a>
                 </h3>
                 {% else %}
